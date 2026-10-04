@@ -1,24 +1,22 @@
 # Production contract
 
-## Runtime baseline
+`world-as-relation` is the public entrypoint for the production *WORLD AS RELATION* instrument.
 
-This repository mounts the World as Relation production projection laboratory from `GeoGeekLab/GeoGeekLab.github.io` pinned to commit `d949bd75870bfd49f6d12b297e6cca02de107f9c`.
+## Runtime
 
-The production module loads D3 and d3-geo-projection and exposes the full projection catalog, graticule and Tissot analysis, interactive rotation/zoom, and data-layer inspection.
+- Source repository: `GeoGeekLab/GeoGeekLab.github.io`
+- Tested source revision: `064ce2c718499fc26a744a9e58cad09d97a323fb`
+- Production channel: `https://geogeeklab.github.io/`
+- Shared bootstrap: `/core/observatory-entry.js`
+- Projection runtime: `/world-projection-lab.js`
+- Provider control: `/core/provider-stability.js` + `/core/data-supply.js`
 
-## Data contract
+## Geospatial provider contract
 
-- Cartographic reference: Natural Earth 1:110m.
-- Earthquakes: USGS rolling past-24-hour feed.
-- Active natural events: NASA EONET open events.
-- Aurora: NOAA SWPC OVATION latest forecast.
+Natural Earth reference geometry is normalized to a fixed source revision by the provider-stability layer. USGS earthquake and NOAA aurora requests use the shared GeoGeek data-supply adapters. The NOAA aurora product link is canonicalized to `https://www.spaceweather.gov/products/aurora-30-minute-forecast`.
 
-## Interpretation limits
+NASA EONET remains a request-time event provider. Projection families, graticules, Tissot indicatrices, overlay geometry, and inspector behavior are supplied by the main production runtime.
 
-Projection choice changes area, shape, angle, distance, direction, and edge behavior. Natural Earth geometry is generalized cartographic reference and is not a legal boundary authority. Aurora is a model forecast, not direct optical observation.
+## Release checks
 
-## Deployment contract
-
-`main` deploys through GitHub Pages Actions. Static contract checks run before the Pages artifact is uploaded.
-
-The production runtime is pinned to an immutable source commit. Runtime upgrades require an explicit pinned-SHA change in `index.html`.
+The repository validates the source revision, shared bootstrap reference, Chromium instrument mount, absence of `.instrument-error`, provider/Data Supply installation, absence of floating Natural Earth requests, NOAA canonical-link behavior, instrument screenshot, Pages deployment, and the deployed public endpoint.
