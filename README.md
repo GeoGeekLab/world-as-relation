@@ -4,7 +4,11 @@
 
 *WORLD AS RELATION* is a cartographic and GIScience instrument for studying how geographic coordinates are transformed into planar representations. It treats map projection as an explicit spatial operator that maps longitude–latitude coordinates **(λ, φ)** into planar coordinates **(x, y)**, then exposes the geometric consequences of that transformation through graticules, Tissot indicatrices, interactive rotation and zoom, and contemporary geospatial layers.
 
-[![World as Relation instrument](https://geogeeklab.github.io/world-as-relation/assets/instrument.png)](https://geogeeklab.github.io/world-as-relation/)
+<p align="center">
+  <a href="https://geogeeklab.github.io/world-as-relation/">
+    <img src="https://geogeeklab.github.io/world-as-relation/assets/instrument.png" alt="World as Relation instrument" width="720">
+  </a>
+</p>
 
 ## Cartographic framework
 
