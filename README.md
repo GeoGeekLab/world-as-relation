@@ -36,7 +36,7 @@ The production runtime uses the D3 geographic stack, including [`d3-geo-projecti
 | Land geometry | [Natural Earth](https://www.naturalearthdata.com/downloads/) 1:110m | Generalized global reference geometry for projection comparison |
 | Earthquakes | [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/feed/) rolling past-24-hour feed | Georeferenced point-event distribution |
 | Active natural events | [NASA Earth Observatory Natural Event Tracker (EONET)](https://eonet.gsfc.nasa.gov/docs/v3) | Event-based Earth-system context |
-| Aurora | [NOAA Space Weather Prediction Center (SWPC) OVATION auroral products](https://www.swpc.noaa.gov/products/aurora-30-minute-forecast) | Time-varying geophysical forecast field |
+| Aurora | [NOAA Space Weather Prediction Center (SWPC) OVATION auroral products](https://www.spaceweather.gov/products/aurora-30-minute-forecast) | Time-varying geophysical forecast field |
 
 These layers introduce point, event, polygonal-reference, and field-like spatial structures into the same projection environment. Because each layer occupies a different spatial support, projection distortion can be evaluated against actual geographic distributions rather than abstract geometry alone.
 
