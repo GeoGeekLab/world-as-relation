@@ -10,6 +10,17 @@
   </a>
 </p>
 
+## Instrument capabilities
+
+*WORLD AS RELATION* provides a comparative projection environment for examining how the same geographic data changes under different planar transformations.
+
+- **Switch among projection families.** Compare cylindrical, pseudocylindrical, azimuthal, and compromise projections within the same interactive map environment.
+- **Expose global projection structure.** Toggle graticules to inspect the transformed geometry of meridians and parallels, including polar behavior, edge conditions, and discontinuities.
+- **Diagnose local distortion.** Use Tissot indicatrices to evaluate directional scale, areal deformation, angular deformation, and spatial variation in projection behavior.
+- **Recenter and rescale the geographic view.** Rotate, pan, and zoom the projection to examine how central meridian, orientation, and scale alter the visual organization of geographic relations.
+- **Overlay geospatial phenomena.** Add land geometry, recent earthquakes, active natural events, and auroral products to evaluate projection effects on real point, event, polygonal, and field-like data.
+- **Compare projection choice against analytical task.** Examine how preservation or deformation of area, angle, shape, distance, and direction affects thematic mapping and global spatial interpretation.
+
 ## Cartographic framework
 
 Every projection redistributes geometric properties when positions on the reference globe are represented in a plane. The local behavior of a projection can be described through the differential of the coordinate transformation: scale factors vary by position and direction, producing changes in area, angle, shape, distance, and azimuth.
