@@ -1,36 +1,42 @@
 # World as Relation
 
-**Map projection · distortion · graticule · Tissot indicatrix · thematic overlay**
+**Map projection · distortion tensor · graticule · Tissot indicatrix · thematic overlay**
 
-World as Relation is a cartographic instrument for studying how geographic coordinates are transformed into planar representations. It makes projection choice observable by combining multiple projection families with graticules, Tissot indicatrices, interactive rotation and zoom, and contemporary geospatial layers.
+*WORLD AS RELATION* is a cartographic and GIScience instrument for studying how geographic coordinates are transformed into planar representations. It treats map projection as an explicit spatial operator that maps longitude–latitude coordinates **(λ, φ)** into planar coordinates **(x, y)**, then exposes the geometric consequences of that transformation through graticules, Tissot indicatrices, interactive rotation and zoom, and contemporary geospatial layers.
 
-![World as Relation instrument](https://geogeeklab.github.io/world-as-relation/assets/instrument.png)
+[![World as Relation instrument](https://geogeeklab.github.io/world-as-relation/assets/instrument.png)](https://geogeeklab.github.io/world-as-relation/)
 
-## Cartographic question
+## Cartographic framework
 
-Every map projection redistributes geometric properties when geographic coordinates are mapped to a plane. The instrument allows area, angular, shape, distance, direction, edge behavior, and global continuity to be compared across projection families within the same visual environment.
+Every projection redistributes geometric properties when positions on the reference globe are represented in a plane. The local behavior of a projection can be described through the differential of the coordinate transformation: scale factors vary by position and direction, producing changes in area, angle, shape, distance, and azimuth.
 
-Tissot indicatrices provide a local diagnostic of deformation. Graticules expose how meridians and parallels are transformed. Rotation and scale controls make the projection itself an object of inspection rather than an invisible background operation.
+Tissot indicatrices provide a local diagnostic of this deformation by visualizing how infinitesimal circles on the globe become ellipses in projected space. Their principal axes express directional scale variation, while changes in ellipse area and eccentricity reveal areal and angular distortion. Graticules expose the global transformation of meridians and parallels, making singularities, polar behavior, edge discontinuities, and continuity properties directly visible.
+
+The production runtime uses the D3 geographic stack, including [`d3-geo-projection`](https://github.com/d3/d3-geo-projection), to compare multiple projection families within one interaction model.
 
 ## Geospatial reference layers
 
-| Layer | Source | Role |
+| Layer | Source | Spatial role |
 | --- | --- | --- |
-| Land geometry | Natural Earth 1:110m | Generalized cartographic reference |
-| Earthquakes | USGS rolling past-24-hour feed | Georeferenced point-event overlay |
-| Active natural events | NASA EONET | Event-based Earth-system context |
-| Aurora | NOAA SWPC OVATION | Forecast geophysical field |
+| Land geometry | [Natural Earth](https://www.naturalearthdata.com/downloads/) 1:110m | Generalized global reference geometry for projection comparison |
+| Earthquakes | [USGS Earthquake Hazards Program](https://earthquake.usgs.gov/earthquakes/feed/) rolling past-24-hour feed | Georeferenced point-event distribution |
+| Active natural events | [NASA Earth Observatory Natural Event Tracker (EONET)](https://eonet.gsfc.nasa.gov/docs/v3) | Event-based Earth-system context |
+| Aurora | [NOAA Space Weather Prediction Center (SWPC) OVATION auroral products](https://www.swpc.noaa.gov/products/aurora-30-minute-forecast) | Time-varying geophysical forecast field |
 
-These overlays allow projection effects to be examined against real geographic distributions rather than abstract geometry alone. Their spatial patterns make scale, polar behavior, edge discontinuities, and areal deformation easier to evaluate.
+These layers introduce point, event, polygonal-reference, and field-like spatial structures into the same projection environment. Because each layer occupies a different spatial support, projection distortion can be evaluated against actual geographic distributions rather than abstract geometry alone.
 
-## Cartographic scope
+## Projection analysis
 
-The instrument is useful for projection comparison, thematic cartography, geovisualization, global-scale spatial analysis, and teaching the geometry of geographic transformation. Natural Earth provides generalized reference geometry, while the live layers introduce point, event, and field data with different spatial supports.
+*WORLD AS RELATION* supports comparative inspection of projection families such as cylindrical, pseudocylindrical, azimuthal, and compromise projections. The analytical emphasis is not on selecting one universal map, but on examining the relationship between projection properties and the task being performed.
+
+For thematic cartography, this distinction is consequential. Area-preserving behavior affects choropleth and density interpretation; angular deformation affects local shape; polar and edge behavior influence global pattern recognition; and central-meridian or rotation choices alter which spatial relations receive visual emphasis.
+
+The instrument therefore connects mathematical cartography with geovisualization, thematic mapping, global spatial analysis, and projection literacy.
 
 ## Instrument access
 
 **Live instrument:** https://geogeeklab.github.io/world-as-relation/
 
-This repository provides the public entrypoint. The production projection laboratory remains in `GeoGeekLab/GeoGeekLab.github.io`; `SOURCE.json` records the pinned upstream revision and `PRODUCTION.md` specifies data provenance, projection behavior, and deployment conditions.
+*WORLD AS RELATION* is a public entrypoint to the production projection laboratory maintained in [`GeoGeekLab/GeoGeekLab.github.io`](https://github.com/GeoGeekLab/GeoGeekLab.github.io). [`SOURCE.json`](./SOURCE.json) records the pinned upstream revision, and [`PRODUCTION.md`](./PRODUCTION.md) specifies data provenance, projection behavior, and deployment conditions.
 
-*GeoGeek note — a projection is a spatial operator, not a backdrop.*
+*GeoGeek note — a projection is a spatial operator, and every operator has a geometry.*
