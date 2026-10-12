@@ -75,7 +75,7 @@ The Lab URL parameter `release=20261011v107watercache1` is an HTML/cache release
 **Live instrument:** https://geogeeklab.github.io/world-as-relation/
 
 Source runtime: [`GeoGeekLab/GeoGeekLab.github.io`](https://github.com/GeoGeekLab/GeoGeekLab.github.io)  
-Pinned revision: [`SOURCE.json`](./SOURCE.json)  
+Source reference manifest: [`SOURCE.json`](./SOURCE.json)  
 Production contract: [`PRODUCTION.md`](./PRODUCTION.md)
 
 *GeoGeek note — a projection is a spatial operator, and every operator has a geometry.*
