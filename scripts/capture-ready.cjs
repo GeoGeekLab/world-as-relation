@@ -84,6 +84,7 @@ async function capture() {
           metrics.includes('LOCAL DISTORTION');
       }, null, {timeout:65000});
       await page.locator('#wCompareToggle').click();
+      await page.locator('#wCompareProjection').selectOption('mercator');
       await page.locator('#wTissotQuick').click();
       await page.waitForFunction(() => {
         const views = document.querySelector('#wViews');
