@@ -5,7 +5,7 @@
 ## Runtime
 
 - Source repository: `GeoGeekLab/GeoGeekLab.github.io`
-- Inspected source revision (production QA pending): `12743de0f7d0e900031ec2cbbe17551255e271a5`
+- Verified source reference (PR and deployed Pages Chromium QA on 2026-10-12): `12743de0f7d0e900031ec2cbbe17551255e271a5`
 - Bootstrap asset release: `20261004b` (shared loader constant; distinct from the Lab HTML release)
 - Production channel: `https://geogeeklab.github.io/`
 - Shared bootstrap: `/core/observatory-entry.js`
@@ -28,3 +28,12 @@ The repository validates the source revision, shared bootstrap reference, Chromi
 The v12 projection runtime already implements two-view comparison, task presets and local spherical-Jacobian distortion metrics. This wrapper deliberately keeps one common runtime rather than copying the projection code. The referenced source SHA is the inspected main-site tree, not an immutable asset lock: the shared origin serves its currently deployed code.
 
 Lab reference: https://geogeeklab.github.io/lab.html?release=20261011v107watercache1
+
+## Deployment verification (2026-10-12)
+
+- PR-only Chromium smoke: **passed** before merge.
+- Production Pages deploy: **passed**.
+- Deployed public instrument Chromium check: **passed**.
+- Evidence: [GitHub Actions deployment run](https://github.com/GeoGeekLab/world-as-relation/actions/runs/38198071133).
+
+These checks validate the deployed entrypoint and its current shared-origin dependencies. They do not make external data feeds, source assets, or orbit/earthquake conditions immutable.
