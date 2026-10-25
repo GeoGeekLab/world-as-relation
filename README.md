@@ -1,5 +1,11 @@
 # World as Relation
 
+<!-- GeoGeekLab VIS: BEGIN -->
+<p align="center">
+  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/scientific-instruments/official-candidates-v1/world-as-relation"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/official-candidates-v1/world-as-relation/readme-hero.svg" alt="World as Relation — graticule and projection visual identity" width="720"></a>
+</p>
+<!-- GeoGeekLab VIS: END -->
+
 **Map projection · distortion · graticule · Tissot indicatrix · geographic layers**
 
 *World as Relation* examines how map projections transform the geography of Earth. A shared global reference geometry moves across different projection systems, making area, scale, shape, and directional relationships visible.
