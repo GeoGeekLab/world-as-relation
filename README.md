@@ -2,7 +2,7 @@
 
 <!-- GeoGeekLab VIS: BEGIN -->
 <p align="center">
-  <a href="https://github.com/GeoGeekLab/geogeeklab-visual-identity/tree/main/logos/scientific-instruments/official-candidates-v1/world-as-relation"><img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/official-candidates-v1/world-as-relation/readme-hero.svg" alt="World as Relation — graticule and projection visual identity" width="720"></a>
+  <img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/readme-artwork-v2/world-as-relation/readme-artwork.svg" alt="world-as-relation — GeoGeekLab scientific visual identity" width="380">
 </p>
 <!-- GeoGeekLab VIS: END -->
 
