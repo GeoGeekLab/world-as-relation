@@ -1,10 +1,5 @@
 # World as Relation
 
-<!-- GeoGeekLab VIS: BEGIN -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/GeoGeekLab/geogeeklab-visual-identity/main/logos/scientific-instruments/readme-artwork-v2/world-as-relation/readme-artwork.svg" alt="world-as-relation — GeoGeekLab scientific visual identity" width="380">
-</p>
-<!-- GeoGeekLab VIS: END -->
 
 **Map projection · distortion · graticule · Tissot indicatrix · geographic layers**
 
